@@ -54,14 +54,30 @@
 		902DB52B2A4C9778003E101A /* HS_TZ */ = {
 			isa = PBXGroup;
 			children = (
+				902DB5402A4C99BA003E101A /* App */,
+				902DB5302A4C9778003E101A /* ViewController.swift */,
+				902DB5412A4C99C2003E101A /* Resources */,
+			);
+			path = HS_TZ;
+			sourceTree = "<group>";
+		};
+		902DB5402A4C99BA003E101A /* App */ = {
+			isa = PBXGroup;
+			children = (
 				902DB52C2A4C9778003E101A /* AppDelegate.swift */,
 				902DB52E2A4C9778003E101A /* SceneDelegate.swift */,
-				902DB5302A4C9778003E101A /* ViewController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		902DB5412A4C99C2003E101A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				902DB5352A4C977A003E101A /* Assets.xcassets */,
 				902DB5372A4C977A003E101A /* LaunchScreen.storyboard */,
 				902DB53A2A4C977A003E101A /* Info.plist */,
 			);
-			path = HS_TZ;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +293,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A3JHD7MWF8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HS_TZ/Info.plist;
+				INFOPLIST_FILE = HS_TZ/resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -306,7 +322,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A3JHD7MWF8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HS_TZ/Info.plist;
+				INFOPLIST_FILE = HS_TZ/resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
