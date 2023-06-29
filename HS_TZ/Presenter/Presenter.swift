@@ -10,7 +10,11 @@ import Foundation
 final class Presenter {
     
     weak var view: PresenterOutput?
+    private let networkService: NetworkServiceInput
     
+    init(networkService: NetworkServiceInput) {
+        self.networkService = networkService
+    }
 }
 
 extension Presenter: PresenterInput {
@@ -18,5 +22,13 @@ extension Presenter: PresenterInput {
     func viewDidLoad() {
         view?.configureTableView()
         view?.configureNavigationBar()
+        networkService.fetchData()
+    }
+}
+
+extension Presenter: NetworkServiceOutput {
+    
+    func returnData(_ data: [DataModel]) {
+        print(data)
     }
 }

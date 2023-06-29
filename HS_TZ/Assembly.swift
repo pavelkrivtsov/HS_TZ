@@ -11,7 +11,9 @@ final class Assembly {
     
     static func assemble()-> UIViewController {
         let tableView = UITableView()
-        let presenter = Presenter()
+        let networkService = NetworkService()
+        let presenter = Presenter(networkService: networkService)
+        networkService.presenter = presenter
         let view = ViewController(presenter: presenter, tableView: tableView)
         presenter.view = view
         return view
