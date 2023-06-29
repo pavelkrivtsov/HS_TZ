@@ -35,10 +35,6 @@ final class ViewController: UIViewController {
 
 extension ViewController: PresenterOutput {
     
-    func configureTableView() {
-        
-    }
-    
     func configureNavigationBar() {
         
     }

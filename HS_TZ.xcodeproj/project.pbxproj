@@ -17,9 +17,13 @@
 		902DB5482A4CB11D003E101A /* PresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5472A4CB11D003E101A /* PresenterOutput.swift */; };
 		902DB54A2A4CB126003E101A /* PresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5492A4CB126003E101A /* PresenterInput.swift */; };
 		902DB54C2A4CBCCE003E101A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB54B2A4CBCCE003E101A /* NetworkService.swift */; };
-		902DB54F2A4CBCE7003E101A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB54E2A4CBCE7003E101A /* Models.swift */; };
+		902DB54F2A4CBCE7003E101A /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB54E2A4CBCE7003E101A /* DataModel.swift */; };
 		902DB5512A4DD5AA003E101A /* NetworkServiceIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5502A4DD5AA003E101A /* NetworkServiceIn.swift */; };
 		902DB5532A4DD5BB003E101A /* NetworkServiceOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5522A4DD5BB003E101A /* NetworkServiceOut.swift */; };
+		902DB5562A4DD7DE003E101A /* TableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5552A4DD7DE003E101A /* TableManager.swift */; };
+		902DB5592A4DD8AC003E101A /* TableManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5582A4DD8AC003E101A /* TableManagerInput.swift */; };
+		902DB55B2A4DD8F7003E101A /* TableManagerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB55A2A4DD8F7003E101A /* TableManagerOutput.swift */; };
+		902DB55D2A4DE35A003E101A /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB55C2A4DE35A003E101A /* ProductCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +39,13 @@
 		902DB5472A4CB11D003E101A /* PresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterOutput.swift; sourceTree = "<group>"; };
 		902DB5492A4CB126003E101A /* PresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInput.swift; sourceTree = "<group>"; };
 		902DB54B2A4CBCCE003E101A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		902DB54E2A4CBCE7003E101A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		902DB54E2A4CBCE7003E101A /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		902DB5502A4DD5AA003E101A /* NetworkServiceIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceIn.swift; sourceTree = "<group>"; };
 		902DB5522A4DD5BB003E101A /* NetworkServiceOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceOut.swift; sourceTree = "<group>"; };
+		902DB5552A4DD7DE003E101A /* TableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableManager.swift; sourceTree = "<group>"; };
+		902DB5582A4DD8AC003E101A /* TableManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableManagerInput.swift; sourceTree = "<group>"; };
+		902DB55A2A4DD8F7003E101A /* TableManagerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableManagerOutput.swift; sourceTree = "<group>"; };
+		902DB55C2A4DE35A003E101A /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +79,10 @@
 			isa = PBXGroup;
 			children = (
 				902DB5402A4C99BA003E101A /* App */,
+				902DB54D2A4CBCDA003E101A /* API */,
 				902DB5442A4CB0B1003E101A /* Assembly.swift */,
 				902DB5462A4CB10B003E101A /* Presenter */,
-				902DB54D2A4CBCDA003E101A /* API */,
+				902DB5572A4DD893003E101A /* TableManager */,
 				902DB5302A4C9778003E101A /* ViewController.swift */,
 				902DB5412A4C99C2003E101A /* Resources */,
 			);
@@ -113,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				902DB5542A4DD5E2003E101A /* NetworkService */,
-				902DB54E2A4CBCE7003E101A /* Models.swift */,
+				902DB54E2A4CBCE7003E101A /* DataModel.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -126,6 +135,17 @@
 				902DB5522A4DD5BB003E101A /* NetworkServiceOut.swift */,
 			);
 			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		902DB5572A4DD893003E101A /* TableManager */ = {
+			isa = PBXGroup;
+			children = (
+				902DB5552A4DD7DE003E101A /* TableManager.swift */,
+				902DB5582A4DD8AC003E101A /* TableManagerInput.swift */,
+				902DB55A2A4DD8F7003E101A /* TableManagerOutput.swift */,
+				902DB55C2A4DE35A003E101A /* ProductCell.swift */,
+			);
+			path = TableManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				902DB5592A4DD8AC003E101A /* TableManagerInput.swift in Sources */,
 				902DB5312A4C9778003E101A /* ViewController.swift in Sources */,
 				902DB54A2A4CB126003E101A /* PresenterInput.swift in Sources */,
 				902DB54C2A4CBCCE003E101A /* NetworkService.swift in Sources */,
@@ -206,7 +227,10 @@
 				902DB5512A4DD5AA003E101A /* NetworkServiceIn.swift in Sources */,
 				902DB5432A4CB0A5003E101A /* Presenter.swift in Sources */,
 				902DB5532A4DD5BB003E101A /* NetworkServiceOut.swift in Sources */,
-				902DB54F2A4CBCE7003E101A /* Models.swift in Sources */,
+				902DB55B2A4DD8F7003E101A /* TableManagerOutput.swift in Sources */,
+				902DB5562A4DD7DE003E101A /* TableManager.swift in Sources */,
+				902DB54F2A4CBCE7003E101A /* DataModel.swift in Sources */,
+				902DB55D2A4DE35A003E101A /* ProductCell.swift in Sources */,
 				902DB52F2A4C9778003E101A /* SceneDelegate.swift in Sources */,
 				902DB5482A4CB11D003E101A /* PresenterOutput.swift in Sources */,
 			);
