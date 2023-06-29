@@ -18,12 +18,13 @@
 		902DB54A2A4CB126003E101A /* PresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5492A4CB126003E101A /* PresenterInput.swift */; };
 		902DB54C2A4CBCCE003E101A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB54B2A4CBCCE003E101A /* NetworkService.swift */; };
 		902DB54F2A4CBCE7003E101A /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB54E2A4CBCE7003E101A /* DataModel.swift */; };
-		902DB5512A4DD5AA003E101A /* NetworkServiceIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5502A4DD5AA003E101A /* NetworkServiceIn.swift */; };
-		902DB5532A4DD5BB003E101A /* NetworkServiceOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5522A4DD5BB003E101A /* NetworkServiceOut.swift */; };
+		902DB5512A4DD5AA003E101A /* NetworkServiceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5502A4DD5AA003E101A /* NetworkServiceInput.swift */; };
+		902DB5532A4DD5BB003E101A /* NetworkServiceOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5522A4DD5BB003E101A /* NetworkServiceOutput.swift */; };
 		902DB5562A4DD7DE003E101A /* TableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5552A4DD7DE003E101A /* TableManager.swift */; };
 		902DB5592A4DD8AC003E101A /* TableManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5582A4DD8AC003E101A /* TableManagerInput.swift */; };
 		902DB55B2A4DD8F7003E101A /* TableManagerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB55A2A4DD8F7003E101A /* TableManagerOutput.swift */; };
 		902DB55D2A4DE35A003E101A /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB55C2A4DE35A003E101A /* ProductCell.swift */; };
+		902DB5602A4DF297003E101A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 902DB55F2A4DF297003E101A /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +41,8 @@
 		902DB5492A4CB126003E101A /* PresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInput.swift; sourceTree = "<group>"; };
 		902DB54B2A4CBCCE003E101A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		902DB54E2A4CBCE7003E101A /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		902DB5502A4DD5AA003E101A /* NetworkServiceIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceIn.swift; sourceTree = "<group>"; };
-		902DB5522A4DD5BB003E101A /* NetworkServiceOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceOut.swift; sourceTree = "<group>"; };
+		902DB5502A4DD5AA003E101A /* NetworkServiceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceInput.swift; sourceTree = "<group>"; };
+		902DB5522A4DD5BB003E101A /* NetworkServiceOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceOutput.swift; sourceTree = "<group>"; };
 		902DB5552A4DD7DE003E101A /* TableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableManager.swift; sourceTree = "<group>"; };
 		902DB5582A4DD8AC003E101A /* TableManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableManagerInput.swift; sourceTree = "<group>"; };
 		902DB55A2A4DD8F7003E101A /* TableManagerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableManagerOutput.swift; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				902DB5602A4DF297003E101A /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,8 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				902DB54B2A4CBCCE003E101A /* NetworkService.swift */,
-				902DB5502A4DD5AA003E101A /* NetworkServiceIn.swift */,
-				902DB5522A4DD5BB003E101A /* NetworkServiceOut.swift */,
+				902DB5502A4DD5AA003E101A /* NetworkServiceInput.swift */,
+				902DB5522A4DD5BB003E101A /* NetworkServiceOutput.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -164,6 +166,9 @@
 			dependencies = (
 			);
 			name = HS_TZ;
+			packageProductDependencies = (
+				902DB55F2A4DF297003E101A /* Kingfisher */,
+			);
 			productName = HS_TZ;
 			productReference = 902DB5292A4C9778003E101A /* HS_TZ.app */;
 			productType = "com.apple.product-type.application";
@@ -192,6 +197,9 @@
 				Base,
 			);
 			mainGroup = 902DB5202A4C9778003E101A;
+			packageReferences = (
+				902DB55E2A4DF297003E101A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 902DB52A2A4C9778003E101A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -224,9 +232,9 @@
 				902DB54C2A4CBCCE003E101A /* NetworkService.swift in Sources */,
 				902DB5452A4CB0B1003E101A /* Assembly.swift in Sources */,
 				902DB52D2A4C9778003E101A /* AppDelegate.swift in Sources */,
-				902DB5512A4DD5AA003E101A /* NetworkServiceIn.swift in Sources */,
+				902DB5512A4DD5AA003E101A /* NetworkServiceInput.swift in Sources */,
 				902DB5432A4CB0A5003E101A /* Presenter.swift in Sources */,
-				902DB5532A4DD5BB003E101A /* NetworkServiceOut.swift in Sources */,
+				902DB5532A4DD5BB003E101A /* NetworkServiceOutput.swift in Sources */,
 				902DB55B2A4DD8F7003E101A /* TableManagerOutput.swift in Sources */,
 				902DB5562A4DD7DE003E101A /* TableManager.swift in Sources */,
 				902DB54F2A4CBCE7003E101A /* DataModel.swift in Sources */,
@@ -444,6 +452,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		902DB55E2A4DF297003E101A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		902DB55F2A4DF297003E101A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 902DB55E2A4DF297003E101A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 902DB5212A4C9778003E101A /* Project object */;
 }

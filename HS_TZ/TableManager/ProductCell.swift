@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class ProductCell: UITableViewCell {
     
@@ -20,10 +21,9 @@ final class ProductCell: UITableViewCell {
         addSubviews()
         addConstraints()
         
-        productImageView.contentMode = .scaleAspectFill
+        productImageView.contentMode = .scaleAspectFit
         productImageView.layer.cornerRadius = 6
         productImageView.clipsToBounds = true
-        productImageView.backgroundColor = .brown
         
         productLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
         productLabel.numberOfLines = 0
@@ -85,6 +85,10 @@ final class ProductCell: UITableViewCell {
 extension ProductCell {
     
     func configure(_ dataModel: DataModel) {
+        guard let url = URL(string: dataModel.image) else {
+            return
+        }
+        productImageView.kf.setImage(with: url)
         productLabel.text = dataModel.title
         productDescriptionLabel.text = dataModel.description
         priceButton.setTitle("from \(dataModel.price) $", for: .normal)
