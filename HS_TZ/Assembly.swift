@@ -14,7 +14,7 @@ final class Assembly {
         let tableManager = TableManager(tableView: tableView)
         let networkService = NetworkService()
         let presenter = Presenter(networkService: networkService, tableManager: tableManager)
-        tableManager.presenter = presenter
+//        tableManager.presenter = presenter
         networkService.presenter = presenter
         let view = ViewController(presenter: presenter, tableView: tableView)
         presenter.view = view
