@@ -13,7 +13,6 @@ final class TableManager: NSObject {
     private let tableView: UITableView
     private var dataSource: UITableViewDiffableDataSource<Int, DataModel>!
     private var data: [DataModel] = []
-    
     private let sectionHeader = CategoryHeader()
     
     init(tableView: UITableView) {
@@ -32,7 +31,6 @@ final class TableManager: NSObject {
         self.tableView.separatorStyle = .singleLine
         self.tableView.allowsSelection = false
         self.tableView.showsVerticalScrollIndicator = false
-        self.tableView.register(CategoryHeader.self, forHeaderFooterViewReuseIdentifier: CategoryHeader.reuseId)
         self.tableView.register(ProductCell.self, forCellReuseIdentifier: ProductCell.reuseId)
         
         dataSource = UITableViewDiffableDataSource(tableView: self.tableView) { tableView, indexPath, item in
@@ -60,10 +58,17 @@ final class TableManager: NSObject {
     
     @objc
     private func categoryButtonSelected(sender: UITapGestureRecognizer) {
-        guard let button = sender.view as? UIButton else { return }
-        if let category = Category(rawValue: button.titleLabel?.text ?? "" ) {
+        guard let button = sender.view as? CategoryButton else { return }
+        
+        sectionHeader.selectButton(button: button)
+        
+        if let category = Category(rawValue: button.titleLabel?.text ?? "") {
             if let categoryIndex = data.firstIndex(where: { $0.category == category}) {
                 tableView.scrollToRow(at: IndexPath(row: categoryIndex, section: 0), at: .top, animated: true)
+                
+                let rectOrigin = CGPoint(x: button.center.x - sectionHeader.frame.midX, y: button.frame.origin.y)
+                let rect = CGRect(origin: rectOrigin, size: sectionHeader.frame.size)
+                sectionHeader.scrollView.scrollRectToVisible(rect, animated: true)
             }
         }
     }

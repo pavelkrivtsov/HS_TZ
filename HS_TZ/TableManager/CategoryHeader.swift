@@ -10,26 +10,21 @@ import UIKit
 final class CategoryHeader: UITableViewHeaderFooterView {
     
     static let reuseId = "CategoryHeader"
-    
-    private var buttonsArray: [UIButton] = []
     let scrollView = UIScrollView()
     let buttonsStack = UIStackView()
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
-        
-        contentView.backgroundColor = .clear
         addSubviews()
         addCondtraints()
+        addButtons()
         
         scrollView.showsHorizontalScrollIndicator = false
         buttonsStack.axis = .horizontal
         buttonsStack.spacing = 8
         
-        
-        createCategoryButtons()
-        if let firstButton = buttonsArray.first {
-            hightlightTagButton(sender: firstButton)
+        if let firstButton = buttonsStack.arrangedSubviews.first as? CategoryButton {
+            selectButton(button: firstButton)
         }
     }
     
@@ -61,39 +56,19 @@ final class CategoryHeader: UITableViewHeaderFooterView {
         ])
     }
     
-    private func createCategoryButtons() {
-        
+    private func addButtons() {
         for category in Category.allCases {
-            let button = UIButton(type: .roundedRect)
-            button.addTarget(self, action: #selector(hightlightTagButton), for: .touchUpInside)
-            button.setTitle(category.rawValue, for: .normal)
-            button.setTitleColor(#colorLiteral(red: 0.9921568627, green: 0.2274509804, blue: 0.4117647059, alpha: 0.4), for: .normal)
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-            button.layer.borderWidth = 1
-            button.layer.borderColor = #colorLiteral(red: 0.9921568627, green: 0.2274509804, blue: 0.4117647059, alpha: 0.4)
-            button.layer.cornerRadius = 15
-            button.contentEdgeInsets = .init(top: 8, left: 18, bottom: 8, right: 18)
-            
-            let index = buttonsStack.arrangedSubviews.endIndex
-            buttonsStack.insertArrangedSubview(button, at: index)
+            let button = CategoryButton(with: category.rawValue)
             buttonsStack.addArrangedSubview(button)
-            buttonsArray.append(button)
         }
-        
     }
+}
+
+extension CategoryHeader {
     
-    @objc
-    private func hightlightTagButton(sender: UIButton) {
-        for button in buttonsArray {
-            button.backgroundColor = .clear
-            button.layer.borderColor = #colorLiteral(red: 0.9921568627, green: 0.2274509804, blue: 0.4117647059, alpha: 0.4)
-            button.setTitleColor(#colorLiteral(red: 0.9921568627, green: 0.2274509804, blue: 0.4117647059, alpha: 0.4), for: .normal)
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-            button.layer.borderWidth = 1
-        }
-        sender.backgroundColor = #colorLiteral(red: 0.9921568627, green: 0.2274509804, blue: 0.4117647059, alpha: 0.2)
-        sender.setTitleColor(#colorLiteral(red: 0.9921568627, green: 0.2274509804, blue: 0.4117647059, alpha: 1), for: .normal)
-        sender.titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .bold)
-        sender.layer.borderWidth = 0
+    func selectButton(button: CategoryButton) {
+        guard let buttons = buttonsStack.arrangedSubviews as? [CategoryButton] else { return }
+        buttons.forEach { $0.setNormal() }
+        button.setSelected()
     }
 }
