@@ -25,14 +25,13 @@ final class TableManager: NSObject {
     }
     
     private func configureTableView() {
-        self.tableView.backgroundColor = #colorLiteral(red: 0.9510702491, green: 0.96117872, blue: 0.9737285972, alpha: 1)
-        self.tableView.delegate = self
-        self.tableView.separatorInset = .zero
-        self.tableView.separatorStyle = .singleLine
-        self.tableView.allowsSelection = false
-        self.tableView.showsVerticalScrollIndicator = false
-        self.tableView.register(ProductCell.self, forCellReuseIdentifier: ProductCell.reuseId)
-        
+        tableView.backgroundColor = Appearence.background
+        tableView.delegate = self
+        tableView.separatorInset = .zero
+        tableView.separatorStyle = .singleLine
+        tableView.allowsSelection = false
+        tableView.showsVerticalScrollIndicator = false
+        tableView.register(ProductCell.self, forCellReuseIdentifier: ProductCell.reuseId)
         dataSource = UITableViewDiffableDataSource(tableView: self.tableView) { tableView, indexPath, item in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductCell.reuseId, for: indexPath) as? ProductCell else {
                 fatalError("ProductCell is not registered for table view")
@@ -44,7 +43,7 @@ final class TableManager: NSObject {
     
     private func configureMainHeader() {
         let headerView = UIView(frame: .init(x: 0, y: 0, width: 0, height: 100))
-        headerView.backgroundColor = .red
+        headerView.backgroundColor = Appearence.background
         self.tableView.tableHeaderView = headerView
         self.tableView.sectionHeaderTopPadding = 0
     }

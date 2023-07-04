@@ -7,22 +7,24 @@
 
 import UIKit
 
-final class CategoryHeader: UITableViewHeaderFooterView {
+final class CategoryHeader: UIView {
     
     static let reuseId = "CategoryHeader"
     let scrollView = UIScrollView()
     let buttonsStack = UIStackView()
     
-    override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = Appearence.background
+
         addSubviews()
         addCondtraints()
         addButtons()
-        
+
         scrollView.showsHorizontalScrollIndicator = false
         buttonsStack.axis = .horizontal
         buttonsStack.spacing = 8
-        
+
         if let firstButton = buttonsStack.arrangedSubviews.first as? CategoryButton {
             selectButton(button: firstButton)
         }
@@ -33,7 +35,7 @@ final class CategoryHeader: UITableViewHeaderFooterView {
     }
     
     private func addSubviews() {
-        contentView.addSubview(scrollView)
+        addSubview(scrollView)
         scrollView.addSubview(buttonsStack)
     }
     
@@ -42,10 +44,10 @@ final class CategoryHeader: UITableViewHeaderFooterView {
         buttonsStack.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            scrollView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            scrollView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            scrollView.topAnchor.constraint(equalTo: self.topAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
             buttonsStack.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
             buttonsStack.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),

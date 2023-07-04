@@ -25,17 +25,18 @@ final class ProductCell: UITableViewCell {
         productImageView.layer.cornerRadius = 6
         productImageView.clipsToBounds = true
         
-        productLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+        productLabel.font = Appearence.systemSemiboldFont
         productLabel.numberOfLines = 0
+        productLabel.textColor = Appearence.mainText
         
-        productDescriptionLabel.font = UIFont.systemFont(ofSize: 13, weight: .regular)
+        productDescriptionLabel.font = Appearence.systemRegularFont
         productDescriptionLabel.numberOfLines = 0
-        productDescriptionLabel.textColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6784313725, alpha: 1)
+        productDescriptionLabel.textColor = Appearence.secondaryText
         
-        priceButton.titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        priceButton.setTitleColor(#colorLiteral(red: 0.9921568627, green: 0.2274509804, blue: 0.4117647059, alpha: 1), for: .normal)
+        priceButton.titleLabel?.font = Appearence.systemRegularFont
+        priceButton.setTitleColor(Appearence.accent, for: .normal)
         priceButton.contentEdgeInsets = .init(top: 8, left: 18, bottom: 8, right: 18)
-        priceButton.layer.borderColor = #colorLiteral(red: 0.9921568627, green: 0.2274509804, blue: 0.4117647059, alpha: 1)
+        priceButton.layer.borderColor = Appearence.accent.cgColor
         priceButton.layer.cornerRadius = 6
         priceButton.layer.borderWidth = 1
     }

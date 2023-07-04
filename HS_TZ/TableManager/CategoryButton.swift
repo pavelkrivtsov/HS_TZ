@@ -31,15 +31,15 @@ extension CategoryButton {
     func setNormal() {
         backgroundColor = .clear
         layer.borderWidth = 1
-        layer.borderColor = #colorLiteral(red: 0.9921568627, green: 0.2274509804, blue: 0.4117647059, alpha: 0.4)
-        setTitleColor(#colorLiteral(red: 0.9921568627, green: 0.2274509804, blue: 0.4117647059, alpha: 0.4), for: .normal)
-        titleLabel?.font = .systemFont(ofSize: 13)
+        layer.borderColor = Appearence.accentTransparent.cgColor
+        setTitleColor(Appearence.accentTransparent, for: .normal)
+        titleLabel?.font = Appearence.systemRegularFont
     }
     
     func setSelected() {
-        backgroundColor = #colorLiteral(red: 0.9921568627, green: 0.2274509804, blue: 0.4117647059, alpha: 1).withAlphaComponent(0.4)
+        backgroundColor = Appearence.categoryBackground
         layer.borderWidth = 0
-        setTitleColor(.red, for: .normal)
-        titleLabel?.font = .boldSystemFont(ofSize: 12)
+        setTitleColor(Appearence.accent, for: .normal)
+        titleLabel?.font = Appearence.systemBoldFont
     }
 }
