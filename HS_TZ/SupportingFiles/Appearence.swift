@@ -19,4 +19,6 @@ enum Appearence {
     static let systemBoldFont = UIFont.systemFont(ofSize: 13, weight: .bold)
     static let systemSemiboldFont = UIFont.systemFont(ofSize: 17, weight: .semibold)
     static let systemMediumFont = UIFont.systemFont(ofSize: 17, weight: .medium)
+    
+    static let arrowIcon = UIImage(named: "ArrowBar")
 }

@@ -41,8 +41,3 @@ extension Presenter: NetworkServiceOutput {
         tableManager.setData(catalog)
     }
 }
-
-// MARK: - TableManagerOutput
-//extension Presenter: TableManagerOutput {
-////    
-////}

@@ -36,6 +36,28 @@ final class ViewController: UIViewController {
 extension ViewController: PresenterOutput {
     
     func configureNavigationBar() {
+        let navigationBarAppearence = UINavigationBarAppearance()
+        navigationBarAppearence.shadowColor = nil
+        navigationController?.navigationBar.standardAppearance = navigationBarAppearence
+        navigationController?.navigationBar.standardAppearance.backgroundColor = Appearence.background
         
+        let leftBarButton = UIButton(type: .system)
+        leftBarButton.setTitle("Москва", for: .normal)
+        leftBarButton.tintColor = Appearence.mainText
+        leftBarButton.titleLabel?.font = Appearence.systemSemiboldFont
+        leftBarButton.setImage(Appearence.arrowIcon, for: .normal)
+        leftBarButton.semanticContentAttribute = .forceRightToLeft
+        leftBarButton.imageEdgeInsets = .init(top: 2, left: 8, bottom: 0, right: 0)
+        leftBarButton.addTarget(self, action: #selector(chooseCity), for: .touchUpInside)
+        let leftButtonItem = UIBarButtonItem(customView: leftBarButton)
+        navigationItem.leftBarButtonItem = leftButtonItem
+    }
+    
+    @objc
+    func chooseCity() {
+        let alert = UIAlertController(title: "Упс...", message: "Выбор города не доступен", preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Закрыть", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
     }
 }

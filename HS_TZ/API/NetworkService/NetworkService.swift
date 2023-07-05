@@ -17,7 +17,7 @@ extension NetworkService: NetworkServiceInput {
     
     func fetchData() {
         
-        guard let url = URL(string: url ) else { return }
+        guard let url = URL(string: url) else { return }
 
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {

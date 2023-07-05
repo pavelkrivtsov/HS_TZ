@@ -8,5 +8,5 @@
 import Foundation
 
 protocol PresenterOutput: AnyObject {
-    func configureNavigationBar() 
+    func configureNavigationBar()
 }

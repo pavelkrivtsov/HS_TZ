@@ -22,7 +22,6 @@
 		902DB5532A4DD5BB003E101A /* NetworkServiceOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5522A4DD5BB003E101A /* NetworkServiceOutput.swift */; };
 		902DB5562A4DD7DE003E101A /* TableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5552A4DD7DE003E101A /* TableManager.swift */; };
 		902DB5592A4DD8AC003E101A /* TableManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5582A4DD8AC003E101A /* TableManagerInput.swift */; };
-		902DB55B2A4DD8F7003E101A /* TableManagerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB55A2A4DD8F7003E101A /* TableManagerOutput.swift */; };
 		902DB55D2A4DE35A003E101A /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB55C2A4DE35A003E101A /* ProductCell.swift */; };
 		902DB5602A4DF297003E101A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 902DB55F2A4DF297003E101A /* Kingfisher */; };
 		902DB5622A4EF47A003E101A /* CategoryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5612A4EF47A003E101A /* CategoryHeader.swift */; };
@@ -48,7 +47,6 @@
 		902DB5522A4DD5BB003E101A /* NetworkServiceOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceOutput.swift; sourceTree = "<group>"; };
 		902DB5552A4DD7DE003E101A /* TableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableManager.swift; sourceTree = "<group>"; };
 		902DB5582A4DD8AC003E101A /* TableManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableManagerInput.swift; sourceTree = "<group>"; };
-		902DB55A2A4DD8F7003E101A /* TableManagerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableManagerOutput.swift; sourceTree = "<group>"; };
 		902DB55C2A4DE35A003E101A /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		902DB5612A4EF47A003E101A /* CategoryHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHeader.swift; sourceTree = "<group>"; };
 		902DB5632A532EBA003E101A /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 			children = (
 				902DB5552A4DD7DE003E101A /* TableManager.swift */,
 				902DB5582A4DD8AC003E101A /* TableManagerInput.swift */,
-				902DB55A2A4DD8F7003E101A /* TableManagerOutput.swift */,
 				902DB55C2A4DE35A003E101A /* ProductCell.swift */,
 				902DB5612A4EF47A003E101A /* CategoryHeader.swift */,
 				902DB5632A532EBA003E101A /* CategoryButton.swift */,
@@ -253,7 +250,6 @@
 				902DB5512A4DD5AA003E101A /* NetworkServiceInput.swift in Sources */,
 				902DB5432A4CB0A5003E101A /* Presenter.swift in Sources */,
 				902DB5532A4DD5BB003E101A /* NetworkServiceOutput.swift in Sources */,
-				902DB55B2A4DD8F7003E101A /* TableManagerOutput.swift in Sources */,
 				902DB5562A4DD7DE003E101A /* TableManager.swift in Sources */,
 				902DB54F2A4CBCE7003E101A /* DataModel.swift in Sources */,
 				902DB5642A532EBA003E101A /* CategoryButton.swift in Sources */,

@@ -9,7 +9,6 @@ import UIKit
 
 final class TableManager: NSObject {
     
-    weak var presenter: TableManagerOutput?
     private let tableView: UITableView
     private var dataSource: UITableViewDiffableDataSource<Int, DataModel>!
     private var data: [DataModel] = []
