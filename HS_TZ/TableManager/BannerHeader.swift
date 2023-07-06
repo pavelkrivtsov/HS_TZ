@@ -1,33 +1,29 @@
 //
-//  CategoryHeader.swift
+//  BannerHeader.swift
 //  HS_TZ
 //
-//  Created by Pavel Krivtsov on 30.06.2023.
+//  Created by Pavel Krivtsov on 06.07.2023.
 //
 
 import UIKit
 
-final class CategoryHeader: UIView {
+final class BannerHeader: UIView {
     
-    static let reuseId = "CategoryHeader"
-    let scrollView = UIScrollView()
-    let buttonsStack = UIStackView()
+    private let images = ["promo1","promo2"]
+    private let scrollView = UIScrollView()
+    private let buttonsStack = UIStackView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = Appearence.background
-
+        
         addSubviews()
         addCondtraints()
         addButtons()
-
+        
         scrollView.showsHorizontalScrollIndicator = false
         buttonsStack.axis = .horizontal
-        buttonsStack.spacing = 8
-
-        if let firstButton = buttonsStack.arrangedSubviews.first as? CategoryButton {
-            selectButton(button: firstButton)
-        }
+        buttonsStack.spacing = 16
     }
     
     required init?(coder: NSCoder) {
@@ -48,29 +44,21 @@ final class CategoryHeader: UIView {
             scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             scrollView.topAnchor.constraint(equalTo: self.topAnchor),
             scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            scrollView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             
             buttonsStack.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
             buttonsStack.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
-            buttonsStack.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 24),
-            buttonsStack.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -24),
+            buttonsStack.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            buttonsStack.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             buttonsStack.centerYAnchor.constraint(equalTo: scrollView.centerYAnchor),
-            buttonsStack.heightAnchor.constraint(equalToConstant: 32),
         ])
     }
     
     private func addButtons() {
-        for category in Category.allCases {
-            let button = CategoryButton(with: category.rawValue)
+        for image in images {
+            let button = UIButton(type: .custom)
+            button.setImage(.init(named: image), for: .normal)
             buttonsStack.addArrangedSubview(button)
         }
-    }
-}
-
-extension CategoryHeader {
-    
-    func selectButton(button: CategoryButton) {
-        guard let buttons = buttonsStack.arrangedSubviews as? [CategoryButton] else { return }
-        buttons.forEach { $0.setNormal() }
-        button.setSelected()
     }
 }

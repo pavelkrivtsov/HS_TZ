@@ -41,9 +41,8 @@ final class TableManager: NSObject {
     }
     
     private func configureMainHeader() {
-        let headerView = UIView(frame: .init(x: 0, y: 0, width: 0, height: 100))
-        headerView.backgroundColor = Appearence.background
-        self.tableView.tableHeaderView = headerView
+        let header = BannerHeader(frame: .init(x: 0, y: 0, width: 0, height: 112))
+        self.tableView.tableHeaderView = header
         self.tableView.sectionHeaderTopPadding = 0
     }
     
