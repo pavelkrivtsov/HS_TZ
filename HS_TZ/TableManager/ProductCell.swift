@@ -85,7 +85,16 @@ final class ProductCell: UITableViewCell {
 
 extension ProductCell {
     
-    func configure(_ dataModel: DataModel) {
+    func configure(_ dataModel: DataModel, firstCell: Bool) {
+        
+        if firstCell == true {
+            layer.cornerRadius = 20
+            layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+            clipsToBounds = true
+        } else {
+            layer.cornerRadius = 0
+        }
+
         guard let url = URL(string: dataModel.image) else {
             return
         }

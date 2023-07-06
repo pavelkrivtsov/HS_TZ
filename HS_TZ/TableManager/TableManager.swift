@@ -35,7 +35,7 @@ final class TableManager: NSObject {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductCell.reuseId, for: indexPath) as? ProductCell else {
                 fatalError("ProductCell is not registered for table view")
             }
-            cell.configure(item)
+            cell.configure(item, firstCell: indexPath.row == 0)
             return cell
         }
     }
