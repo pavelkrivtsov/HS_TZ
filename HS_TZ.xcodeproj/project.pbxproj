@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90058AA22A58745F00BF6FB8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90058AA12A58745F00BF6FB8 /* TabBarViewController.swift */; };
+		90058AA42A5874B700BF6FB8 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90058AA32A5874B700BF6FB8 /* OtherViewController.swift */; };
 		902DB52D2A4C9778003E101A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB52C2A4C9778003E101A /* AppDelegate.swift */; };
 		902DB52F2A4C9778003E101A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB52E2A4C9778003E101A /* SceneDelegate.swift */; };
 		902DB5312A4C9778003E101A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DB5302A4C9778003E101A /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		90058AA12A58745F00BF6FB8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		90058AA32A5874B700BF6FB8 /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		902DB5292A4C9778003E101A /* HS_TZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HS_TZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		902DB52C2A4C9778003E101A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		902DB52E2A4C9778003E101A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +71,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90058AA52A587B2C00BF6FB8 /* Modul */ = {
+			isa = PBXGroup;
+			children = (
+				902DB5442A4CB0B1003E101A /* Assembly.swift */,
+				902DB5462A4CB10B003E101A /* Presenter */,
+				902DB5572A4DD893003E101A /* TableManager */,
+				902DB5302A4C9778003E101A /* ViewController.swift */,
+			);
+			path = Modul;
+			sourceTree = "<group>";
+		};
 		902DB5202A4C9778003E101A = {
 			isa = PBXGroup;
 			children = (
@@ -88,10 +103,9 @@
 			children = (
 				902DB5402A4C99BA003E101A /* App */,
 				902DB54D2A4CBCDA003E101A /* API */,
-				902DB5442A4CB0B1003E101A /* Assembly.swift */,
-				902DB5462A4CB10B003E101A /* Presenter */,
-				902DB5572A4DD893003E101A /* TableManager */,
-				902DB5302A4C9778003E101A /* ViewController.swift */,
+				90058AA12A58745F00BF6FB8 /* TabBarViewController.swift */,
+				90058AA32A5874B700BF6FB8 /* OtherViewController.swift */,
+				90058AA52A587B2C00BF6FB8 /* Modul */,
 				902DB5672A549633003E101A /* SupportingFiles */,
 				902DB5412A4C99C2003E101A /* Resources */,
 			);
@@ -260,10 +274,12 @@
 				902DB5622A4EF47A003E101A /* CategoryHeader.swift in Sources */,
 				902DB5512A4DD5AA003E101A /* NetworkServiceInput.swift in Sources */,
 				902DB56F2A570D07003E101A /* BannerHeader.swift in Sources */,
+				90058AA42A5874B700BF6FB8 /* OtherViewController.swift in Sources */,
 				902DB5432A4CB0A5003E101A /* Presenter.swift in Sources */,
 				902DB5532A4DD5BB003E101A /* NetworkServiceOutput.swift in Sources */,
 				902DB5562A4DD7DE003E101A /* TableManager.swift in Sources */,
 				902DB54F2A4CBCE7003E101A /* DataModel.swift in Sources */,
+				90058AA22A58745F00BF6FB8 /* TabBarViewController.swift in Sources */,
 				902DB5642A532EBA003E101A /* CategoryButton.swift in Sources */,
 				902DB55D2A4DE35A003E101A /* ProductCell.swift in Sources */,
 				902DB52F2A4C9778003E101A /* SceneDelegate.swift in Sources */,
