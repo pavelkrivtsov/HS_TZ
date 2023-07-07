@@ -1,6 +1,7 @@
 # HS_TZ
 
-<img src="https://github.com/pavelkrivtsov/EM_TZ/assets/72617749/a8a7e117-37db-448b-accf-94140b8786a8" width="250" height="525" /> <img src="https://github.com/pavelkrivtsov/EM_TZ/assets/72617749/8589880c-7d77-4cd2-bad2-09d7c6b45c53" width="250" height="525" />
+<img src="https://github.com/pavelkrivtsov/HS_TZ/assets/72617749/f3b55308-0ed0-4986-a093-525b71a5bea5" alt="drawing" width="250"/>
+<img src="https://github.com/pavelkrivtsov/EM_TZ/assets/72617749/8589880c-7d77-4cd2-bad2-09d7c6b45c53" alt="drawing" width="250"/>
 
 ### Что надо сделать:
 
